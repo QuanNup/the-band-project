@@ -26,12 +26,12 @@
     .contact-info{
         line-height: 2;
     }
-    .contact-form .contact-control{
+    .contact-form .form-control{
         padding: 15px;
         font-size: 16px;
     }
     .form-submit-btn{
-        font-size: 16px;
+        font-size: 18px;
     }
     .socials-list{
         font-size: 48px;
