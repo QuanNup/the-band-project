@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Band</title>
-    <link rel="shortcut icon" href="/w3_band/assets/img/icons/icons.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/img/icons/icons.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
@@ -18,7 +18,7 @@
     </style>
 
     <div id="main">
-        <div id="header">
+        <div class="js-header" id="header">
             <!-- Begin: nav -->
             <ul id="nav">
                 <li><a href="#">Home</a></li>
@@ -38,15 +38,15 @@
                 </li>
             </ul>
             <!-- End: nav -->
-
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
             <!-- Begin: search buttun -->
             <div class="search-btn">
                 <i class="SI ti-search"></i>
             </div>
             <!-- End: search-buttun -->
-            <div id="mobile-menu" class="mobile-menu-btn">
-                <i class="menu-icon ti-menu"></i>
-            </div>
+            
 
         </div>
         
@@ -66,7 +66,7 @@
                 <div class="member-list">
                     <div class="member-items">
                         <p class="member-name">Name</p>
-                        <img src="./assets/img/band/member1.jpg" alt="Error" class="member-img">
+                        <img src="./assets/img/band/member2.JPG" alt="Error" class="member-img">
                     </div>
                     <div class="member-items">
                         <p class="member-name">Quân</p>
@@ -74,7 +74,7 @@
                     </div>
                     <div class="member-items">
                         <p class="member-name">Name</p>
-                        <img src="./assets/img/band/member1.jpg" alt="Error" class="member-img">
+                        <img src="./assets/img/band/member2.JPG " alt="Error" class="member-img">
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -94,7 +94,7 @@
                         <li>November <span class="quantity">3</span></li>
                     </ul>
                     <div class="row place-list">
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt-16 prl-8">
                             <img src="./assets/img/place/place1.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
@@ -103,17 +103,17 @@
                                 <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col col-third">
-                            <img src="./assets/img/place/place2.jpg" alt="New York" class="place-img">
+                        <div class="col col-third s-col-full mt-16 prl-8">
+                            <img src="./assets/img/place/place2.jpg" alt="Paris" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
-                                <p class="place-time">Sat 28 Nov 2016</p>
+                                <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
                                 <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col col-third">
-                            <img src="./assets/img/place/place3.jpg" alt="New York" class="place-img">
+                        <div class="col col-third s-col-full mt-16 prl-8">
+                            <img src="./assets/img/place/place3.jpg" alt="San Francisco" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
@@ -174,18 +174,18 @@
                 <p class="section-sub-heading">Fan? Drop a note!</p>
                 
                 <div class="row contact-content">
-                    <div class="col col-half contact-info">
+                    <div class="col col-half s-col-full contact-info">
                         <p><i class="ti-location-pin"></i>Chicago, US</p>
-                        <p><i class="ti-mobile"></i>Phone: +00 151515</p>
-                        <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                        <p><i class="ti-mobile"></i>Phone: <a href="tel:+00 151515">+00 151515</a></p>
+                        <p><i class="ti-email"></i>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></p>
                     </div>
-                    <div class="col col-half contact-form">
+                    <div class="col col-half s-col-full contact-form">
                         <form action="">
-                            <div class="row">
-                                <div class="col col-half">
+                            <div class="row w3-">
+                                <div class="col col-half s-col-full prl-8">
                                     <input type="text" name="" placeholder="Name" required id="" class="form-control">
                                 </div>
-                                <div class="col col-half">
+                                <div class="col col-half s-col-full prl-8 s-mt-8">
                                     <input type="email" name="" placeholder="Email" required id="" class="form-control">
                                 </div>
                             </div>
@@ -193,10 +193,9 @@
                                 <div class="col col-full">
                                     <input type="text" name="" placeholder="Message" required id="" class="form-control">
                                 </div>
-                                <div class="col col-full">
-                                    <input class="form-submit-btn" type="submit" value="SEND">
-                                </div>
                             </div>
+                                <input class="form-submit-btn pull-right s-full-width" type="submit" value="SEND">
+                            
                         </form>
                     </div>
                 </div>
@@ -260,15 +259,29 @@
                 header.style.height= null;
             }
         }
+        // const closeTable = document.querySelector('.js-header')
+        // closeTable.addEventListener('click',function(event){
+        //     event.stopPropagation();
+        // })
 
         var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
         for (var i=0; i< menuItems.length; i++){
             var menuItem = menuItems[i];
-            menuItem.onclick= function(){
-                header.style.height= null;
+
+
+            menuItem.onclick= function(event){
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+
+                if(isParentMenu){
+                    event.preventDefault();
+                }else{
+                    header.style.height= null;
+                }
+
             }
         }
 
     </script>
+
 </body>
 </html>
