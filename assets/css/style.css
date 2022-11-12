@@ -18,6 +18,7 @@ html{
 
 
 .row{
+    
 }
 
 .row::after{
@@ -457,7 +458,7 @@ html{
     background-color: black;
     color: #fff;
     margin: 16px 0;
-    padding: 8px 16px;  
+    padding: 8px 16px;
     float: right; 
     cursor: pointer;
     border: none;
