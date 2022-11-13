@@ -17,7 +17,7 @@
                 
     </style>
 
-    <div id="main">
+    <div id="main" class="js-main">
         <div class="js-header" id="header">
             <!-- Begin: nav -->
             <ul id="nav">
@@ -228,12 +228,15 @@
         const modalClose = document.querySelector('.js-modal-close')
         const modalContainer= document.querySelector('.js-modal-container')
         const modalCloses = document.querySelector('.js-modal-closes')
+        const main=document.querySelector('.js-main')
         function showBuyTickets(){
             modal.classList.add('open')
+            main.classList.add('dim')
         }
 
         function hideBuyTickets(){
             modal.classList.remove('open')
+            main.classList.remove('dim')
         }
         
         for (const buyBtn of buyBtns){
